@@ -60,9 +60,9 @@ const store=MongoStore.create({
 
 
  
-// app.get("/",(req, res) => {
-//     res.send("Welcome to root")
-// })
+app.get("/",(req, res) => {
+    res.redirect("/listings")
+})
 
 
  app.use(session(sessionOptions))

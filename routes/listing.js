@@ -9,7 +9,7 @@ const {storage}=require("../cloudConfig.js")
 const upload=multer({storage})
 
 router
-  .route("/listings")
+  .route("/")
   .get(wrapAsync(listingController.index))
   .post(
     isLoggedIn,
