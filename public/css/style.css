@@ -111,3 +111,9 @@ body{
     height: 400px;
     width:80vh ;
  }
+@media (max-width:768px) {
+    #filters{
+        display: none !important;
+    }
+    
+}

@@ -21,7 +21,7 @@ const userRouter=require("./routes/user.js")
 
 
 
-const dbUrl=process.env.ATLASDB_URL
+const dbUrl=process.env.MONGO_URL
 
 async function main(){
     await mongoose.connect(dbUrl)
