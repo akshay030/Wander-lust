@@ -1,119 +1,200 @@
-body{
-    font-family: "Plus Jakarta Sans",sans-serif !important;
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-.container{
+
+.container {
     flex: 1;
 }
 
-.navbar{
+.navbar {
     height: 5rem;
     background-color: white !important;
 }
 
-.fa-compass{
+.fa-compass {
     color: #fe424d;
     font-size: 2rem;
 }
-.nav-link{
+
+.nav-link {
     color: #222222 !important;
 }
-.f-info-links a{
+
+.f-info-links a {
     text-decoration: none;
     color: #222222;
 }
-.f-info-links a:hover{
-    text-decoration:underline ;
-}
-.f-info-links,
-.f-info-socials,
-.f-info-brand{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.f-info-socials i{
-    margin-right:1rem ;
-    font-size:1.2rem ;
+
+.f-info-links a:hover {
+    text-decoration: underline;
 }
 
-
-.f-info{
+.f-info {
     text-align: center;
     display: flex;
-    height: 8rem;
-    background-color: #ebebeb;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
+    background-color: #ebebeb;
     justify-content: center;
-    align-items: space-evenly;
-
+    padding: 1rem;
 }
 
-.listing-card{
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
-    
 }
-.card-img-top{
+
+.card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
-.card-body{
+
+.card-body {
     padding: 0 !important;
 }
-.card-text p{
-    font-weight: 400 !important;
-}
-.listing-link{
-    text-decoration: none;
-}
 
-/* overlay card */
-
-.card-img-overlay{
-    opacity: 0;
-}
-.card-img-overlay:hover{
-    opacity:0.2 ;
-    background-color: white;
-}
-
-.add-btn{
-    background-color: #fe424d !important;
-    border: none !important;
-}
-.edit-btn{
+.add-btn,
+.edit-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
 
-
-
-.show-img{
+.show-img {
     height: 30vh;
-
 }
 
-.btns{
+.btns {
     display: flex;
 }
-.show-card{
-    padding-left: 0;
-    padding-right: 0;
+
+#map {
+    height: 400px;
+    width: 80vh;
 }
 
+/* Responsive Styles */
 
-#map { 
-    height: 400px;
-    width:80vh ;
- }
-@media (max-width:768px) {
-    #filters{
-        display: none !important;
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        height: 4rem;
     }
-    
+    .fa-compass {
+        font-size: 1.5rem;
+    }
+    .f-info {
+        flex-direction: column;
+        height: auto;
+    }
+    .listing-card {
+        margin-bottom: 1rem;
+    }
+    .show-img {
+        height: 20vh;
+    }
+    .btns {
+        flex-direction: column;
+        width: 100%;
+    }
+    #map {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        height: 4.5rem;
+    }
+    .f-info {
+        height: 6rem;
+    }
+    .listing-card {
+        margin-bottom: 1.5rem;
+    }
+    .show-img {
+        height: 25vh;
+    }
+    .btns {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #map {
+        width: 90%;
+        height: 350px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar {
+        height: 5rem;
+    }
+    .fa-compass {
+        font-size: 1.8rem;
+    }
+    .f-info {
+        height: 7rem;
+    }
+    .show-img {
+        height: 28vh;
+    }
+    #map {
+        width: 85%;
+        height: 400px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .fa-compass {
+        font-size: 2rem;
+    }
+    .show-img {
+        height: 30vh;
+    }
+    #map {
+        width: 75%;
+        height: 450px;
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    .fa-compass {
+        font-size: 2.2rem;
+    }
+    .show-img {
+        height: 35vh;
+    }
+    #map {
+        width: 70%;
+        height: 500px;
+    }
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 992px) {
+    .f-info-links,
+    .f-info-socials,
+    .f-info-brand {
+        width: 33%;
+        margin-bottom: 0;
+    }
 }
